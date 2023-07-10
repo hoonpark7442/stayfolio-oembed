@@ -1,0 +1,185 @@
+
+<!-- component -->
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full table-fixed">
+          <tbody>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              	title
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+              	<h6 class="text-lg font-bold dark:text-white"><%= @result["title"] %></h6>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	type
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["type"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	version
+              </td>
+              <td colspan="2" class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["version"] %>
+              </td>              
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	provider_name
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["provider_name"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	provider_url
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+              	<span class="font-medium text-blue-600 dark:text-blue-500 underline">
+              		<%= link_to @result["provider_url"], @result["provider_url"] %>	
+              	</span>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	author_name
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["author_name"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	author_url
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+              	<span class="font-medium text-blue-600 dark:text-blue-500 underline">
+              		<%= link_to @result["author_url"], @result["author_url"] %>	
+              	</span>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	is_plus
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["is_plus"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	html<br>
+              	(<%= @result["width"] %>/<%= @result["height"] %>)
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["html"] %>
+                <%= html_sanitizer @result["html"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	width
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["width"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	height
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["height"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	duration
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["duration"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	description
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["description"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	thumbnail_url
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+              	<span class="font-medium text-blue-600 dark:text-blue-500 underline">
+              		<%= link_to @result["thumbnail_url"], @result["thumbnail_url"] %>	
+              	</span>
+              	<div>
+              		<img src="<%= @result["thumbnail_url"] %>" alt="thumbnail_url">
+              	</div>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	thumbnail_width
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["thumbnail_width"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	thumbnail_height
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["thumbnail_height"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	thumbnail_url_with_play_button
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["thumbnail_url_with_play_button"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	upload_date
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["upload_date"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	video_id
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["video_id"] %>
+              </td>
+            </tr>
+            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">
+              	uri
+              </td>
+              <td class="text-sm text-gray-900 font-light px-6 py-4">
+                <%= @result["uri"] %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

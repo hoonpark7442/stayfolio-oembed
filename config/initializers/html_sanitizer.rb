@@ -1,0 +1,5 @@
+# Rails::Html::WhiteListSanitizer.allowed_tags.add 'iframe'
+# Rails::Html::WhiteListSanitizer.allowed_tags.add 'blockquote'
+# Rails::Html::WhiteListSanitizer.allowed_tags.add 'script'
+# Rails::Html::WhiteListSanitizer.allowed_tags.add 'a'
+# Rails::Html::WhiteListSanitizer.allowed_tags.add 'p'

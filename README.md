@@ -16,7 +16,9 @@ Webpacker::Manifest::MissingEntryError
 
 이를 방지위해 `yarn` 명령어를 실행시킨 후 다시 서버를 키시기 바랍니다. 
 > 만약 `yarn` 명령어로도 에러가 사라지지 않는다면 `rails webpacker:install`로 웹팩커 재설치 후 서버 실행 부탁드립니다.
- 
+
+서버 실행 전 `bundle install`로 의존성 추가 바랍니다.
+
 위 명령어 실행후 아래 명령어로 서버를 시작하시길 바랍니다.
 
 ```

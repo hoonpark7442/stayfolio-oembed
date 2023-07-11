@@ -60,6 +60,7 @@ group :test do
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'bullet' # eager load 처리용
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

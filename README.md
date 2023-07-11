@@ -3,6 +3,9 @@
 데이터베이스를 사용하여 providers 정보를 관리하기로 결정하였습니다. 그러므로 시작하시기 전, 커맨드창에서 아래 명령어를 입력하시길 바랍니다
 
 ```
+rails db:create
+rails db:migrate
+
 rails db:seed
 ```
 

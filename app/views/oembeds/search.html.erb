@@ -81,6 +81,7 @@
               </td>
               <td class="text-sm text-gray-900 font-light px-6 py-4">
                 <%= @result["html"] %>
+                <!-- sanitizing html -->
                 <%= html_sanitizer @result["html"] %>
               </td>
             </tr>
@@ -118,14 +119,15 @@
             </tr>
             <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
               <td class="px-6 py-4 text-sm font-medium text-gray-900">
-              	thumbnail_url
+              	thumbnail_url<br>
+              	(<%= @result["thumbnail_width"] %>/<%= @result["thumbnail_height"] %>)
               </td>
               <td class="text-sm text-gray-900 font-light px-6 py-4">
               	<span class="font-medium text-blue-600 dark:text-blue-500 underline">
               		<%= link_to @result["thumbnail_url"], @result["thumbnail_url"] %>	
               	</span>
               	<div>
-              		<img src="<%= @result["thumbnail_url"] %>" alt="thumbnail_url">
+              		<img src="<%= @result["thumbnail_url"] %>" width="<%= @result["thumbnail_width"] %>" height="<%= @result["thumbnail_height"] %>" alt="thumbnail_url">
               	</div>
               </td>
             </tr>

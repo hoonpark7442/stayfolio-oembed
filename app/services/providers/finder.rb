@@ -7,6 +7,7 @@ module Providers
 				# batch로 메모리 consumption 최대한 줄인다.
 				scheme = Scheme.scheme_column_select.find_each(batch_size: BATCH_SIZE).detect{ |sch| sch.regexed_url&.match?(url) }
 
+				# 값이 없으면 nil을 반환한다.
 				scheme&.provider
 			end
 		end

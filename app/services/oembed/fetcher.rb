@@ -19,6 +19,7 @@ module Oembed
 
 		private 
 
+		# async http request
 		def fetch_async
 			Async do
 				res = Net::HTTP.get_response(@oembed_endpoint)

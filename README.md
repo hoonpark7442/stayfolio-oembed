@@ -1,24 +1,13 @@
-# README
+# Oembed Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+데이터베이스를 사용하여 providers 정보를 관리하기로 결정하였습니다. 그러므로 시작하시기 전, 커맨드창에서 아래 명령어를 입력하시길 바랍니다
 
-Things you may want to cover:
+```
+rails db:seed
+```
 
-* Ruby version
+db에 데이터가 입력되었다면 아래 명령어로 서버를 시작하시길 바랍니다.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+./bin/dev
+```
